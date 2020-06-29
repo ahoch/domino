@@ -1,0 +1,20 @@
+<project name="domino" basedir=".">
+	<description>
+		Build File - Train Dominoes
+	</description>
+	<!-- set global properties for this build -->
+	<property name="src" location="src"/>
+	<property name="bin" location="bin"/>
+	<property environment="env"/>
+	<mkdir dir="${bin}"/>
+	<path id="classpath"> 
+		<pathelement location="bin" />
+	</path> 
+	
+    <javac srcdir="${src}" destdir="${bin}">
+		<classpath refid="classpath"/>
+	</javac>
+		<java classname="domino.DominoRunner">
+		<classpath refid="classpath"/>
+	</java>
+	</project>
